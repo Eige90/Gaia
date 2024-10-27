@@ -1,0 +1,182 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+        .display {
+            font-size: 2.5rem;
+            color: #1a202c;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .result {
+            font-size: 1.5rem;
+            color: #a0aec0;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .button {
+            background: #edf2f7;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            color: #1a202c;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .button.operator {
+            background: linear-gradient(to bottom, #f6ad55, #ed8936);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div id="display1" class="display">2550</div>
+        <div id="display2" class="display">30</div>
+        <div id="result" class="result">= 85</div>
+        <div class="buttons">
+            <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="toggleSign()">+/-</button>
+            <button class="button" onclick="percent()">%</button>
+            <button class="button operator" onclick="setOperator('÷')">÷</button>
+            <button class="button" onclick="appendNumber(7)">7</button>
+            <button class="button" onclick="appendNumber(8)">8</button>
+            <button class="button" onclick="appendNumber(9)">9</button>
+            <button class="button operator" onclick="setOperator('×')">×</button>
+            <button class="button" onclick="appendNumber(4)">4</button>
+            <button class="button" onclick="appendNumber(5)">5</button>
+            <button class="button" onclick="appendNumber(6)">6</button>
+            <button class="button operator" onclick="setOperator('-')">-</button>
+            <button class="button" onclick="appendNumber(1)">1</button>
+            <button class="button" onclick="appendNumber(2)">2</button>
+            <button class="button" onclick="appendNumber(3)">3</button>
+            <button class="button operator" onclick="setOperator('+')">+</button>
+            <button class="button" onclick="appendNumber(0)">0</button>
+            <button class="button" onclick="appendDot()">.</button>
+            <button class="button operator" style="grid-column: span 2;" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let display1 = document.getElementById('display1');
+        let display2 = document.getElementById('display2');
+        let result = document.getElementById('result');
+        let currentOperator = null;
+        let firstOperand = '';
+        let secondOperand = '';
+
+        function clearDisplay() {
+            firstOperand = '';
+            secondOperand = '';
+            currentOperator = null;
+            display1.textContent = '';
+            display2.textContent = '';
+            result.textContent = '';
+        }
+
+        function appendNumber(number) {
+            if (currentOperator === null) {
+                firstOperand += number;
+                display1.textContent = firstOperand;
+            } else {
+                secondOperand += number;
+                display2.textContent = secondOperand;
+            }
+        }
+
+        function appendDot() {
+            if (currentOperator === null) {
+                if (!firstOperand.includes('.')) {
+                    firstOperand += '.';
+                    display1.textContent = firstOperand;
+                }
+            } else {
+                if (!secondOperand.includes('.')) {
+                    secondOperand += '.';
+                    display2.textContent = secondOperand;
+                }
+            }
+        }
+
+        function toggleSign() {
+            if (currentOperator === null) {
+                firstOperand = (parseFloat(firstOperand) * -1).toString();
+                display1.textContent = firstOperand;
+            } else {
+                secondOperand = (parseFloat(secondOperand) * -1).toString();
+                display2.textContent = secondOperand;
+            }
+        }
+
+        function percent() {
+            if (currentOperator === null) {
+                firstOperand = (parseFloat(firstOperand) / 100).toString();
+                display1.textContent = firstOperand;
+            } else {
+                secondOperand = (parseFloat(secondOperand) / 100).toString();
+                display2.textContent = secondOperand;
+            }
+        }
+
+        function setOperator(operator) {
+            if (firstOperand === '') return;
+            currentOperator = operator;
+        }
+
+        function calculate() {
+            if (firstOperand === '' || secondOperand === '' || currentOperator === null) return;
+            let computation;
+            const first = parseFloat(firstOperand);
+            const second = parseFloat(secondOperand);
+            switch (currentOperator) {
+                case '+':
+                    computation = first + second;
+                    break;
+                case '-':
+                    computation = first - second;
+                    break;
+                case '×':
+                    computation = first * second;
+                    break;
+                case '÷':
+                    computation = first / second;
+                    break;
+                default:
+                    return;
+            }
+            result.textContent = `= ${computation}`;
+            firstOperand = computation.toString();
+            secondOperand = '';
+            currentOperator = null;
+            display1.textContent = firstOperand;
+            display2.textContent = '';
+        }
+    </script>
+</body>
+</html>
