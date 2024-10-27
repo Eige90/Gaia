@@ -1,4 +1,4 @@
-<div style="width:100%;height:0;padding-bottom:134%;position:relative;"><iframe src="https://giphy.com/embed/cLkg857UN0y4ISQoTT" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/looking-galaxy-seeing-cLkg857UN0y4ISQoTT">via GIPHY</a></p>
+![Echidna](https://giphy.com/embed/cLkg857UN0y4ISQoTT)
 # Gaia 🌍✨
 
 In Greek mythology, **Gaia** is the primordial mother, the Earth itself 🌌 and the source of all life 🌱. She embodies the forces of nature 🍃 that enable growth 🌾 and regeneration ♻️, symbolizing balance ⚖️ and harmony 🌈.
