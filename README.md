@@ -15,4 +15,9 @@ Wie Gaia das Leben auf der Erde nährt und erhält 🌏💧, so soll dieses Repo
 Falls du selbst etwas kopierst, danke Gaia.
 
 
-Das Projekt beinhaltet das Erstellen einer simplen Webanwendung (voerst ein Taschenrechner) mittels HTML, CSS und JS. Da ich gerade suf nem Ipad arbeite ohne VSC wird die Ausgabe noch durch AWS unterstützt.
+Das Projekt beinhaltet das Erstellen einer simplen Webanwendung (voerst ein Taschenrechner) mittels HTML, CSS und JS. Da ich gerade auf nem Ipad arbeite ohne VSC, wird die Ausgabe noch durch AWS unterstützt.
+
+  **AWS**
+    VPC
+    EC2
+    S3
