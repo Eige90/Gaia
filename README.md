@@ -1,3 +1,6 @@
+![Echidna](https://media.giphy.com/media/26BRQjZejh2vgXPJ6/giphy.gif?cid=790b76115muvn1smz4dimf2sh4i12oi4v5gho7je9x5iozpm&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+
+
 # Gaia 🌍✨
 
 In Greek mythology, **Gaia** is the primordial mother, the Earth itself 🌌 and the source of all life 🌱. She embodies the forces of nature 🍃 that enable growth 🌾 and regeneration ♻️, symbolizing balance ⚖️ and harmony 🌈.
