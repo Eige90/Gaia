@@ -1,5 +1,4 @@
-![Echidna](https://media.giphy.com/media/26BRQjZejh2vgXPJ6/giphy.gif?cid=790b76115muvn1smz4dimf2sh4i12oi4v5gho7je9x5iozpm&ep=v1_gifs_search&rid=giphy.gif&ct=g)
-
+![Echidna] <iframe src="https://giphy.com/embed/26BRQjZejh2vgXPJ6" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/purple-shurly-miniplanet-26BRQjZejh2vgXPJ6">via GIPHY</a></p>
 
 # Gaia 🌍✨
 
