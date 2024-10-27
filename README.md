@@ -13,3 +13,6 @@ In der griechischen Mythologie ist **Gaia** die Urmutter, die Erde selbst 🌌 u
 Wie Gaia das Leben auf der Erde nährt und erhält 🌏💧, so soll dieses Repo ein Beitrag zur Optimierung von anderen Projekten leisten. Ziel ist es, effiziente ⚙️ und nachhaltige 🌿 Lösungen bereitzustellen, die Projekte unterstützen 💪 und ihnen zu mehr Stabilität und Produktivität 📈 verhelfen.
 
 Falls du selbst etwas kopierst, danke Gaia.
+
+
+Das Projekt beinhaltet das Erstellen einer simplen Webanwendung (voerst ein Taschenrechner) mittels HTML, CSS und JS. Da ich gerade suf nem Ipad arbeite ohne VSC wird die Ausgabe noch durch AWS unterstützt.
