@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -8,16 +7,18 @@
     <link rel="stylesheet" href="Calculator.css">
 </head>
 <body>
-    <video class="background-video" autoplay muted loop>
-        <source src="https://github.com/Eige90/854228-hd_1920_1080_30fps.mp4" type="video/mp4"> <!-- Ersetze durch den Link zu deinem Video -->
-        Dein Browser unterstützt das Video-Tag nicht.
+    <!-- Hintergrundvideo -->
+    <video class="background-video" autoplay loop muted playsinline>
+        <source src="854228-hd_1920_1080_30fps.mp4" type="video/mp4">
+        Dein Browser unterstützt keine HTML5-Videos.
     </video>
 
+    <!-- Hauptinhalt der Seite -->
     <div class="calculator">
         <div class="display">
-            <div id="currentInput">255</div>
+            <div id="currentInput">2550</div>
             <div id="previousInput">÷ 30</div>
-            <div class="result" id="result">= 8.5</div>
+            <div class="result" id="result">= 85</div>
         </div>
         <div class="buttons">
             <button class="button" id="clear">C</button>
@@ -41,6 +42,7 @@
             <button class="button operator" id="equals">=</button>
         </div>
     </div>
+
     <script src="Calculator.js"></script>
 </body>
 </html>
