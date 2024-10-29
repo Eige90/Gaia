@@ -1,52 +1,96 @@
+/* Allgemeine Stile für die Seite */
+* {
+    box-sizing: border-box; /* Box-Sizing für bessere Handhabung */
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
+    font-family: 'Arial', sans-serif; /* Schriftart */
+    background: linear-gradient(to bottom right, #f0f4ff, #ffffff); /* Hintergrundgradient */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    justify-content: center; /* Zentrieren des Inhalts horizontal */
+    align-items: center; /* Zentrieren des Inhalts vertikal */
+    height: 100vh; /* Vollständige Höhe des Ansichtsfensters */
+    margin: 0; /* Entfernen des Standard-Margins */
 }
+
+/* Stile für den Taschenrechner */
 .calculator {
-    width: 300px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background: #ffffff;
+    width: 90vw; /* Breite des Rechners in Viewport-Breite */
+    max-width: 400px; /* Maximale Breite */
+    border-radius: 20px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
+    padding: 20px; /* Innenabstand */
+    background: #ffffff; /* Hintergrundfarbe */
+    transition: transform 0.3s ease; /* Animationseffekt bei Hover */
 }
+
+.calculator:hover {
+    transform: scale(1.02); /* Leichte Vergrößerung beim Hover */
+}
+
+/* Anzeige des Rechners */
 .display {
-    font-size: 2.5em;
-    text-align: right;
-    margin-bottom: 10px;
-    color: #2c3e50;
+    font-size: 2.5em; /* Schriftgröße der Anzeige */
+    text-align: right; /* Textausrichtung nach rechts */
+    margin-bottom: 10px; /* Abstand zum nächsten Element */
+    color: #2c3e50; /* Textfarbe */
 }
+
+/* Ergebnisanzeige */
 .display .result {
-    font-size: 1.2em;
-    color: #bdc3c7;
+    font-size: 1.2em; /* Schriftgröße für das Ergebnis */
+    color: #bdc3c7; /* Farbe für das Ergebnis */
 }
+
+/* Container für die Schaltflächen */
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    display: grid; /* Verwendung von CSS-Grid für die Schaltflächen */
+    grid-template-columns: repeat(4, 1fr); /* 4 gleichmäßige Spalten */
+    gap: 10px; /* Abstand zwischen den Schaltflächen */
 }
+
+/* Stile für die Schaltflächen */
 .button {
-    background: #ffffff;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 1.5em;
-    color: #2c3e50;
-    padding: 20px;
-    cursor: pointer;
-    transition: background 0.3s;
+    background: #ffffff; /* Hintergrundfarbe der Schaltflächen */
+    border: none; /* Keine Umrandung */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+    font-size: 1.5em; /* Schriftgröße */
+    color: #2c3e50; /* Textfarbe */
+    padding: 20px; /* Innenabstand */
+    cursor: pointer; /* Zeiger ändern beim Hover */
+    transition: background 0.3s, transform 0.2s; /* Sanfter Übergang für den Hintergrund und Transformation */
 }
+
+/* Hover-Effekt für allgemeine Schaltflächen */
 .button:hover {
-    background: #f0f4ff;
+    background: #f0f4ff; /* Hintergrundfarbe beim Hover */
+    transform: translateY(-2px); /* Leichte Anhebung beim Hover */
 }
+
+/* Stile für Operator-Schaltflächen */
 .button.operator {
-    background: linear-gradient(to bottom, #f39c12, #e67e22);
-    color: #ffffff;
+    background: linear-gradient(to bottom, #f39c12, #e67e22); /* Farbverlauf für Operatoren */
+    color: #ffffff; /* Textfarbe */
 }
+
+/* Hover-Effekt für Operator-Schaltflächen */
 .button.operator:hover {
-    background: linear-gradient(to bottom, #e67e22, #d35400);
+    background: linear-gradient(to bottom, #e67e22, #d35400); /* Dunklerer Farbverlauf beim Hover */
+}
+
+/* Responsives Design */
+@media (max-width: 600px) {
+    .calculator {
+        width: 95vw; /* Breite auf 95% des Viewports setzen */
+    }
+    
+    .display {
+        font-size: 2em; /* Kleinere Schriftgröße für die Anzeige */
+    }
+    
+    .button {
+        font-size: 1.2em; /* Kleinere Schriftgröße für die Schaltflächen */
+        padding: 15px; /* Weniger Innenabstand */
+    }
 }
