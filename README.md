@@ -15,10 +15,12 @@ Wie Gaia das Leben auf der Erde nährt und erhält 🌏💧, so soll dieses Repo
 Falls du selbst etwas kopierst, danke Gaia.
 
 
-Das Projekt beinhaltet das Erstellen einer simplen Webanwendung (voerst ein Taschenrechner) mittels HTML, CSS und JS. Da ich gerade auf nem Ipad arbeite ohne VSC, wird die Ausgabe noch durch AWS unterstützt. ein Hosting ginge auch über github pages 
+Das Projekt beinhaltet das Erstellen einer simplen Webanwendung (voerst ein Taschenrechner) mittels HTML, CSS und JS. Da ich gerade auf nem Ipad arbeite ohne VSC, wird die Ausgabe noch durch AWS unterstützt (geht nicht. hab keine strg taste 😅). ein Hosting ginge auch über github pages alles aber nur statisch
 # Link https://eige90.github.io/Gaia/
 
+github pages geht. weiterleitung funktioniert nur wenn die anderen htmls im gleichen repo sind. scheißß css
 
+docker muss noch dazu aber erstmal ein theme
   **AWS**
     VPC
     EC2
