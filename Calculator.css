@@ -1,39 +1,52 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taschenrechner</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Pfad zur CSS-Datei -->
-</head>
-<body>
-    <div class="calculator">
-        <div class="display">
-            <div>2550</div>
-            <div>÷ 30</div>
-            <div class="result">= 85</div>
-        </div>
-        <div class="buttons">
-            <button class="button">C</button>
-            <button class="button">+/-</button>
-            <button class="button">%</button>
-            <button class="button operator">×</button>
-            <button class="button">7</button>
-            <button class="button">8</button>
-            <button class="button">9</button>
-            <button class="button operator">÷</button>
-            <button class="button">4</button>
-            <button class="button">5</button>
-            <button class="button">6</button>
-            <button class="button operator">-</button>
-            <button class="button">1</button>
-            <button class="button">2</button>
-            <button class="button">3</button>
-            <button class="button operator">+</button>
-            <button class="button" style="grid-column: span 2;">0</button>
-            <button class="button">.</button>
-            <button class="button operator">=</button>
-        </div>
-    </div>
-</body>
-</html>
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.calculator {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #ffffff;
+}
+.display {
+    font-size: 2.5em;
+    text-align: right;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+.display .result {
+    font-size: 1.2em;
+    color: #bdc3c7;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.button {
+    background: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.5em;
+    color: #2c3e50;
+    padding: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.button:hover {
+    background: #f0f4ff;
+}
+.button.operator {
+    background: linear-gradient(to bottom, #f39c12, #e67e22);
+    color: #ffffff;
+}
+.button.operator:hover {
+    background: linear-gradient(to bottom, #e67e22, #d35400);
+}
