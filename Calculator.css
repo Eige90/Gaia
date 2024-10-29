@@ -41,45 +41,13 @@ body {
     background: rgba(255, 255, 255, 0.9); /* Leicht transparent für Lesbarkeit */
 }
 
-.display {
-    font-size: 2.5em;
-    text-align: right;
-    margin-bottom: 10px;
-    color: #2c3e50;
+/* Dein Video als Hintergrundvideo */
+.background-video {
+    content: url('/854228-hd_1920_1080_30fps.mp4'); /* Datei-Pfad zum Video */
+    autoplay: true;
+    loop: true;
+    muted: true;
+    playsinline: true;
 }
 
-.display .result {
-    font-size: 1.2em;
-    color: #bdc3c7;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-.button {
-    background: #ffffff;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 1.5em;
-    color: #2c3e50;
-    padding: 20px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.button:hover {
-    background: #f0f4ff;
-}
-
-.button.operator {
-    background: linear-gradient(to bottom, #f39c12, #e67e22);
-    color: #ffffff;
-}
-
-.button.operator:hover {
-    background: linear-gradient(to bottom, #e67e22, #d35400);
-}
+/* Alle anderen CSS-Stile bleiben unverändert */
