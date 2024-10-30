@@ -26,3 +26,5 @@ docker muss noch dazu aber erstmal ein theme
     EC2
     S3
     git remote add origin https://github.com/Eige90/gaia.git
+
+    next noch nicht fertig und vercel auch nicht
